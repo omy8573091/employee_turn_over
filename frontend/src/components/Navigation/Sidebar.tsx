@@ -14,7 +14,7 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   {
     name: 'Dashboard',
-    href: '/',
+    href: '/dashboard',
     icon: '📊',
     description: 'Overview and key metrics'
   },

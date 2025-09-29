@@ -20,14 +20,14 @@ export default function LoginPage() {
     try {
       const response = await apiClient.login(email, password);
       // Redirect to dashboard
-      window.location.href = '/';
+      window.location.href = '/dashboard';
     } catch (error) {
       console.error('Login error:', error);
       setError('Invalid credentials. Using demo mode...');
       // Set a demo token for demo purposes
       localStorage.setItem('token', 'demo-token');
       setTimeout(() => {
-        window.location.href = '/';
+        window.location.href = '/dashboard';
       }, 1000);
     } finally {
       setLoading(false);
